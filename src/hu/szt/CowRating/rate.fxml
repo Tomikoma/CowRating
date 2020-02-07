@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="222.0" prefWidth="397.0" xmlns="http://javafx.com/javafx/8.0.201" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.szt.CowRating.RateController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="222.0" prefWidth="397.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="39.0" prefWidth="179.0" text="Marha értékelése">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <TextField fx:id="rateTf" promptText="enar">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="198.0">
+                     <children>
+                        <Slider fx:id="rateSld" blockIncrement="1.0" max="5.0" min="1.0" onMouseDragged="#onSliderChanged" onMouseReleased="#onSliderChanged" prefHeight="16.0" prefWidth="183.0" value="3.0" />
+                        <Label fx:id="rateLbl" text="3" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Button fx:id="rateBtn" mnemonicParsing="false" onAction="#rate" prefHeight="36.0" prefWidth="109.0" text="Értékelj" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
