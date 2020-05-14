@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CowRating:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CowRating_jar</output-path>
+    <root id="archive" name="CowRating.jar">
+      <element id="module-output" name="CowRating" />
+      <element id="extracted-dir" path="$USER_HOME$/Letöltések/mysql-connector (1).jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

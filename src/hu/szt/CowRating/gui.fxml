@@ -17,18 +17,24 @@
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="Fájl">
+          <Menu mnemonicParsing="false" text="Megnyitás">
             <items>
               <MenuItem fx:id="video1" mnemonicParsing="false" onAction="#chooseVideo" text="Első videó" />
                   <MenuItem fx:id="video2" mnemonicParsing="false" onAction="#chooseVideo" text="Második videó" />
-                  <MenuItem mnemonicParsing="false" onAction="#chooseFile" text="TXT" />
+                  <MenuItem mnemonicParsing="false" onAction="#chooseFile" text="Fülszámok" />
+                  <MenuItem mnemonicParsing="false" onAction="#chooseBarn" text="Istálló" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Segítség">
-            <items>
-              <MenuItem mnemonicParsing="false" onAction="#about" text="Info" />
-            </items>
-          </Menu>
+            <Menu mnemonicParsing="false" text="Mentés">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#save" text="Értékelések mentése" />
+              </items>
+            </Menu>
+<!--          <Menu mnemonicParsing="false" onAction="#rate">-->
+<!--               <graphic>-->
+<!--                  <Label onMouseClicked="#about" text="Információ" />-->
+<!--               </graphic>-->
+<!--          </Menu>-->
         </menus>
       </MenuBar>
    </top>
@@ -42,8 +48,8 @@
             </AnchorPane>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0">
                <children>
-                  <Button fx:id="btn" mnemonicParsing="false" prefHeight="29.0" prefWidth="100.0" text="Indítás" />
-                  <Button fx:id="rateBtn" mnemonicParsing="false" onAction="#rate" prefHeight="29.0" prefWidth="103.0" text="Értékelés">
+                  <Button fx:id="startStopButton" mnemonicParsing="false" onAction="#playStopVideo" prefHeight="29.0" prefWidth="100.0" text="Indítás" />
+                  <Button fx:id="rateBtn" disable="true" mnemonicParsing="false" onAction="#rate" prefHeight="29.0" prefWidth="103.0" text="Értékelés">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -60,7 +66,7 @@
       </HBox>
    </center>
    <bottom>
-      <Label fx:id="enarLbl" alignment="CENTER" prefHeight="63.0" prefWidth="422.0" text="A detektált fülszám: " textAlignment="CENTER" BorderPane.alignment="CENTER">
+      <Label fx:id="enarLbl" alignment="CENTER" prefHeight="63.0" prefWidth="422.0" text="A detektált fülszám: " textAlignment="CENTER" visible="false" BorderPane.alignment="CENTER">
          <font>
             <Font size="30.0" />
          </font>
