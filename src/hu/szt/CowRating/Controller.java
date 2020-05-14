@@ -253,7 +253,7 @@ public class Controller implements Initializable {
                 }
             }
         } catch (SQLException e) {
-            createAlert(Alert.AlertType.ERROR,"Hiba","Hiba történt a fülszám adatbázisból való lekérdezése közben!");
+            return null;
         }
         return enarFromDB == null ? null : enarFromDB.substring(enarFromDB.length()-5);
     }
