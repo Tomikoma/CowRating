@@ -228,7 +228,7 @@ public class Controller implements Initializable {
             return null;
         String enarFromDB = null;
         String connectionString = "jdbc:mysql://localhost:3306/cow";
-        try(Connection conn = DriverManager.getConnection(connectionString,"dev","Object==0;")){
+        try(Connection conn = DriverManager.getConnection(connectionString,"dev","password")){
             PreparedStatement statement = conn.prepareStatement("SELECT R1SZELETSZ FROM R1" +
                     " WHERE R1SZKSORSZ = ? AND R1SZELETSZ LIKE ? LIMIT 1");
             statement.setInt(1, barnNumber);
